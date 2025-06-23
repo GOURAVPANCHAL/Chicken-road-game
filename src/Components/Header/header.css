@@ -1,0 +1,30 @@
+.header{
+    background-color: var(--blue);
+    color: white;
+    display: flex;
+    padding: 10px 77px;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    /* position: sticky; */
+    top: 0;
+    z-index: 1000;
+    
+}
+
+.header-logo img{
+    width: 100px;
+}
+
+.header-links{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header-links a{
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}

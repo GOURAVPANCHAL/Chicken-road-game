@@ -1,0 +1,18 @@
+.game-section{
+    background-color: var(--blue);
+    padding: 0 2rem;
+}
+
+.game-container{
+    background: white;
+    /* padding: 1rem; */
+    overflow: hidden;
+}
+
+.game-title{
+    font-size: 28px;
+    font-weight: 600;
+    color: black;
+    margin: 0;
+    padding: 1rem;
+}
