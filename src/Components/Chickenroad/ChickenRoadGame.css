@@ -3,6 +3,7 @@
   flex-wrap: nowrap;
   scrollbar-width: none;
   cursor: pointer;
+  overflow-y: hidden;
 }
 
 .betting-item-main::-webkit-scrollbar {
@@ -33,21 +34,19 @@
 .moving-hen {
   position: absolute;
   bottom: 7%;
+  left: 25%;
   z-index: 10;
 }
 
+
 .moving-hen img {
-  width: 100%;
-  height: 100%;
+  width: 130px;
+  height: auto;
 }
+
 .outer-circle {
-  width: 100px;
-  height: 100px;
-  background-color: rgb(62 68 100);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  width: 105px;
+  height: 105px;
   position: absolute;
   z-index: 1;
   top: 35%;
@@ -55,11 +54,6 @@
 }
 
 .inner-circle {
-  width: 95px;
-  height: 95px;
-  background: RGB(108 120 185);
-  background: linear-gradient(150deg, rgba(108, 120, 185, 1) 50%, rgba(96, 107, 171, 1) 50%);
-  border-radius: 50%;
   z-index: 2;
   top: 75%;
   left: 10%;
@@ -70,29 +64,24 @@
 
 .inner-circle p {
   color: white;
-  font-size: 30px;
+  font-size: 28px;
   margin: 0;
   font-weight: 700;
   text-shadow: 2px 2px #383c56;
-}
-
-.circle-container.active .outer-circle,
-.outer-circle.active {
-  background: #29C839;
-  transition: 0.3s;
+  position: absolute;
+  animation: flipOnce 1s ease-in-out;
 }
 
 .inner-circle.active {
-  background: #209C4B;
-  background: linear-gradient(156deg, rgba(32, 156, 75, 1) 50%, rgba(47, 170, 82, 1) 50%);
-  background-size: cover;
-  color: white;
   transition: 0.3s;
+  background-image: url("../../images/coin1.png");
+  height: 100%;
+  width: 100%;
 }
 
 .circle-container.active .outer-circle,
 .circle-container.active .inner-circle {
-  animation: flipOnce 0.8s ease-in-out;
+  animation: flipOnce 1s ease-in-out;
   transform-origin: center;
 }
 
@@ -110,12 +99,9 @@
   }
 }
 
-.previous-indicator {
-  position: absolute;
-  top: 176px;
-  right: 59px;
+.prev-icon-img {
+  animation: flipOnce 1s ease-in-out;
   z-index: 9;
-  animation: flipOnce 0.8s ease-in-out;
 }
 
 .fire-overlay {
@@ -135,13 +121,145 @@
   height: auto;
 }
 
-@keyframes fire-flicker {
-  0% {
-    transform: translateX(-50%) scale(1) rotate(0deg);
-    opacity: 0.85;
+
+.last-image {
+  width: 100%;
+  height: 100%;
+}
+
+.fire-overlay img {
+  animation: flicker 0.5s infinite alternate;
+}
+
+@keyframes flicker {
+  from {
+    transform: translateY(0);
+    opacity: 0.9;
   }
-  100% {
-    transform: translateX(-50%) scale(1.1) rotate(1deg);
+
+  to {
+    transform: translateY(-5px);
     opacity: 1;
   }
+}
+.egg-final-box {
+  background-image: url('../../images/last-image.png');
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 40px;
+  overflow: hidden;
+}
+
+.egg-image-main {
+  position: relative;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.egg-image {
+  width: 70%;
+  height: auto;
+  animation: bounce 2s infinite;
+  z-index: 2;
+  position: relative;
+  bottom: 100%;
+  left: -1%;
+}
+
+.egg-image-main p {
+  position: absolute;
+  bottom: 120%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+  z-index: 3;
+}
+
+.hen-frame {
+  width: 80px;
+  height: auto;
+  transition: opacity 0.5s ease-in-out;
+  image-rendering: pixelated;
+  z-index: 4;
+  position: absolute;
+  bottom: 60px;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+
+.congrats-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.congrats-card {
+  background: #fff;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 0 30px rgba(0,0,0,0.4);
+  animation: popUp 0.3s ease-in-out;
+}
+
+.congrats-card h1 {
+  color: #e91e63;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.congrats-card p {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.congrats-card button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.chicken-road-last-image{
+  width: 100%;
+  height: 100%;
 }

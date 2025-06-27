@@ -12,7 +12,6 @@ const Game = () => {
             <div className='game-header'>
               <h2 className='game-title'>Chicken Road Gambling Game</h2>
               <ChickenRoadGame />
-              {/* <BattingSection /> */}
             </div>
           </div>
         </div>
