@@ -1,0 +1,48 @@
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    rotate: 90;
+    transform: rotate(0.02turn);
+}
+
+.popup-content {
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(15px);          
+    -webkit-backdrop-filter: blur(15px);  
+    padding: 50px 80px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2); 
+    transform: rotate(10deg);
+    transition: transform 0.9s ease-in-out;
+}
+
+.popup-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: white;
+    font-weight: 600;
+}
+.popup-content h1 {
+    margin-bottom: 10px;
+    color: yellow;
+    font-weight: 600;
+}
+.popup-content h4 {
+    margin-bottom: 0px;
+    color: #2ecc71;
+    font-weight: 600;
+}
+
+
+

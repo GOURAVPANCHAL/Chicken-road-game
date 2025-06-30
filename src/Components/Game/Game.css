@@ -1,6 +1,6 @@
 .game-section{
     background-color: var(--blue);
-    padding: 0 2rem;
+    padding: 0;
 }
 
 .game-container{
@@ -11,8 +11,166 @@
 
 .game-title{
     font-size: 28px;
-    font-weight: 600;
-    color: black;
+    font-weight: 800;
+    color: white;
     margin: 0;
-    padding: 1rem;
+    background-color: rgb(58, 61, 81);
+}
+
+
+.header-btns{
+    background-color:#4e5163;
+    color: white;
+    width: fit-content;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.header-btns:hover{
+    color: rgb(155, 192, 48);
+    transition: 0.3s;
+}
+
+.game-heder-main{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(58, 61, 81);
+    padding: 1rem 2rem;
+}
+
+.header-all-buttn{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header-all-buttn p{
+    margin: 0;
+}
+
+.howtoplay-popup-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.howtoplay-popup {
+  background-color: #1f2937; /* Dark background */
+  padding: 25px 30px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 600px;
+  color: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  position: relative;
+}
+
+.popup-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.popup-header h2 {
+  font-size: 20px;
+  color: #fff;
+}
+
+.popup-close-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.howtoplay-list {
+  margin-top: 20px;
+  line-height: 1.6;
+  font-size: 15px;
+  padding-left: 18px;
+}
+
+.howtoplay-list ul {
+  list-style-type: disc;
+  margin-top: 8px;
+  padding-left: 20px;
+}
+
+.howtoplay-list li {
+  margin-bottom: 12px;
+}
+
+.menu-popup {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background-color: #2c2f3a;
+  color: white;
+  width: 260px;
+  border-radius: 10px;
+  padding: 15px;
+  z-index: 1001;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+}
+
+.menu-header {
+  font-size: 12px;
+  margin-bottom: 15px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.change-avatar {
+  display: block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 4px;
+  cursor: pointer;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+  font-size: 14px;
+}
+
+.menu-item i {
+  margin-right: 5px;
+}
+
+.menu-link {
+  font-size: 14px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.menu-link:hover {
+  text-decoration: underline;
+}
+
+.powered-by {
+  font-size: 12px;
+  color: #888;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.brand {
+  color: #facc15; /* Yellow-ish highlight */
+  font-weight: bold;
+}
+
+.user-image img{
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
 }
